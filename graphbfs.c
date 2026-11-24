@@ -21,8 +21,9 @@ front=rear=-1;
 }
 return vertex;
 }
-void BFS(int start,int n,int i,current)
+void BFS(int start,int n)
 {
+int i,current;
 for(i=0;i<n;i++)
 visited[i]=0;
 front =rear=-1;
@@ -59,9 +60,12 @@ for(j=0;j<n;j++)
 {
 scanf("%d",&adj[i][j]);
 }}
-printf("enter the string vertex(0 to %d):",n-1);
-scanf("invalid starting vertex\n");
-return 0;
-BFS(start,n);
+printf("enter the starting vertex (0 to %d):", n - 1);
+scanf("%d", &start);
+if (start < 0 || start >= n)
+{
+printf("invalid starting vertex\n");
 return 0;
 }
+BFS(start, n);
+return 0;
