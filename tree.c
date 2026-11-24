@@ -6,7 +6,7 @@ int data;
 struct node*left;
 struct node*right;
 };
-struct node*createdNode(int value)
+struct node*createNode(int value)
 {
 struct node*Newnode;
 newNode=(struct node*)malloc(sizeof(struct node));
@@ -27,7 +27,7 @@ else
 printf("duplication elements are not allowed");
 return root;
 }
-void inorder(struct node*node)
+void inorder(struct node*root)
 {
 if(root!=NULL)
 {
