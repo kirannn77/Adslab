@@ -8,7 +8,7 @@ struct node*right;
 };
 struct node*createNode(int value)
 {
-struct node*Newnode;
+struct node*newNode;
 newNode=(struct node*)malloc(sizeof(struct node));
 newNode->data=value;
 newNode->left=NULL;
@@ -49,7 +49,7 @@ if(root!=NULL)
 {
 postorder(root->left);
 postorder(root->right);
-postorder("%d",root->data);
+printf("%d",root->data);
 }}
 struct node*findMin(struct node*root)
 {
@@ -67,7 +67,7 @@ return NULL;
 }
 if(value<root->data)
 root->left=deleteNode(root->left,value);
-else if(value>root->data);
+else if(value>root->data)
 root->right=deleteNode(root->right,value);
 else
 {
@@ -76,7 +76,7 @@ if(root->left==NULL&&root->right==NULL)
 free(root);
 return NULL;
 }
-else if(root->left=NULL)
+else if(root->left==NULL)
 {
 temp=root->right;
 free(root);
@@ -119,18 +119,18 @@ root=insert(root,value);
 break;
 case 2:
 printf("Inorder Traversal");
-Inorder(root);
-print("\n");
+inorder(root);
+printf("\n");
 break;
 case 3:
 printf("Preorder Traversal");
-Preorder(root);
-print("\n");
+preorder(root);
+printf("\n");
 break;
 case 4:
 printf("Postorder Traversal");
-Postorder(root);
-print("\n");
+postorder(root);
+printf("\n");
 break;
 case 5:
 printf("enter value to delete");
@@ -138,7 +138,7 @@ scanf("%d",&value);
 root=deleteNode(root,value);
 break;
 case 6:
-printf("existing program");
+printf("Exiting program");
 break;
 default:
 printf("invalid choice\n");
