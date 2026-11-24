@@ -98,7 +98,7 @@ return root;
 int main()
 {
 struct node*root=NULL;
-int choice,value;
+int choice=0,value;
 do
 {
 printf("\n_____BINARY SEARCH TREE______\n");
